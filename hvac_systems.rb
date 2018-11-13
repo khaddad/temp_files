@@ -1386,7 +1386,7 @@ begin
 
     # create makeup air system
     if(air_sys_zoning == "MZ")
-      create_air_sys_multi_zone(model, zones, sys_name, hw_loop, chw_loop, air_sys_flow, mau, air_sys_heating_coil_type,
+      air_sys_loop = create_air_sys_multi_zone(model, sys_name, hw_loop, chw_loop, air_sys_flow, mau, air_sys_heating_coil_type,
                                 air_sys_cooling_coil_type)
     end
 
@@ -1394,12 +1394,19 @@ begin
     zones.each do |zone|
       # create air system
       if(air_sys_zoning == "SZ")
-        create_air_sys_single_zone(model, zone, sys_name, hw_loop, chw_loop, air_sys_flow, mau, air_sys_heating_coil_type,
+        air_sys_loop = create_air_sys_single_zone(model, zone, sys_name, hw_loop, chw_loop, air_sys_flow, mau, air_sys_heating_coil_type,
                                    air_sys_cooling_coil_type)
       end
 
       # zone system
       create_zone_sys(model, zone, hw_loop, chw_loop, zone_sys_type, zone_htg_coil_type, zone_clg_coil_type, zone_baseboard_type)
+
+      # create diffuser
+      if (air_sys_zoning == "MZ")
+        diffuser = OpenStudio::Model::AirTerminalSingleDuctUncontrolled.new(model, always_on)
+        air_sys_loop.addBranchForZone(zone, diffuser.to_StraightComponent)
+      end
+
     end # of zone loop
 
     return true
@@ -1436,14 +1443,17 @@ begin
 
     # Zone cooling coil
     if(zone_clg_coil_type == "DX")
-      zone_clg_coil = BTAP::Resources::HVAC::Plant::add_onespeed_DX_coil(model, always_on)
+     # zone_clg_coil = OpenStudio::Model::CoilCoolingDXSingleSpeed.new(model)
+      zone_clg_coil = BTAP::Resources::HVAC::Plant.add_onespeed_DX_coil(model, always_on)
     elsif(zone_clg_coil_type == "Chilled Water")
       zone_clg_coil = OpenStudio::Model::CoilCoolingWater.new(model, always_on)
       chw_loop.addDemandBranchForComponent(zone_clg_coil)
     end
 
     # Constant volume supply fan
-    zone_fan = OpenStudio::Model::FanConstantVolume.new(model,always_on)
+    if(zone_sys_type != "none")
+      zone_fan = OpenStudio::Model::FanConstantVolume.new(model,always_on)
+    end
 
     # Zone system
     zone_sys = nil
@@ -1459,7 +1469,7 @@ begin
       zone_elec_baseboard = OpenStudio::Model::ZoneHVACBaseboardConvectiveElectric.new(model)
       zone_elec_baseboard.addToThermalZone(zone)
     elsif(zone_baseboard_type == "Hot Water")
-      baseboard_coil = OpenStudio::Model::SetpointManagerOutdoorAirReset.new(model)
+      baseboard_coil = OpenStudio::Model::CoilHeatingWaterBaseboard.new(model)
       hw_loop.addDemandBranchForComponent(baseboard_coil)
       zone_baseboard = OpenStudio::Model::ZoneHVACBaseboardConvectiveWater.new(model, always_on, baseboard_coil)
       zone_baseboard.addToThermalZone(zone)
@@ -1469,10 +1479,9 @@ begin
 
   end # create zone system loop
 
-  def create_air_sys_multi_zone(model, zones, sys_name, hw_loop, chw_loop, air_sys_flow, mau, air_sys_htg_coil_type,
+  def create_air_sys_multi_zone(model, sys_name, hw_loop, chw_loop, air_sys_flow, mau, air_sys_htg_coil_type,
                                 air_sys_clg_coil_type)
 
-    # zones: Thermal zones array
     # sys_name: part of full system name
     # hw_loop: Hot-water loop
     # chw_loop: Chilled-water loop
@@ -1502,7 +1511,7 @@ begin
     air_loop_sizing.setMinimumSystemAirFlowRatio(1.0)
     air_loop_sizing.setPreheatDesignTemperature(7.0)
     air_loop_sizing.setPreheatDesignHumidityRatio(0.008)
-    air_loop_sizing.setPrecoolDesignTemperature(12.8)
+    air_loop_sizing.setPrecoolDesignTemperature(13.0)
     air_loop_sizing.setPrecoolDesignHumidityRatio(0.008)
     air_loop_sizing.setCentralCoolingDesignSupplyAirTemperature(13.0)
     air_loop_sizing.setCentralHeatingDesignSupplyAirTemperature(43.0)
@@ -1529,13 +1538,14 @@ begin
       air_sys_htg_coil = OpenStudio::Model::CoilHeatingElectric.new(model, always_on)
     elsif(air_sys_htg_coil_type == "Hot Water")
       air_sys_htg_coil = OpenStudio::Model::CoilHeatingWater.new(model, always_on)
-      hw_loop.addDemandBranchForComponent(mau_htg_coil)
+      hw_loop.addDemandBranchForComponent(air_sys_htg_coil)
     end
 
     # cooling coil
     air_sys_clg_coil = nil
     if(air_sys_clg_coil_type == "DX")
-      htg_coil = OpenStudio::Model::CoilHeatingDXSingleSpeed.new(model)
+      #air_sys_clg_coil = OpenStudio::Model::CoilHeatingDXSingleSpeed.new(model)
+      air_sys_clg_coil = BTAP::Resources::HVAC::Plant.add_onespeed_DX_coil(model, always_on)
     end
 
     # oa_controller
@@ -1548,8 +1558,12 @@ begin
     # add the components to the air loop
     supply_inlet_node = air_sys_loop.supplyInletNode
     air_sys_fan.addToNode(supply_inlet_node)
-    if(air_sys_htg_coil) then air_sys_htg_coil.addToNode(supply_inlet_node) end
-    if(air_sys_clg_coil) then air_sys_clg_coil.addToNode(supply_inlet_node) end
+    if(air_sys_htg_coil)
+      air_sys_htg_coil.addToNode(supply_inlet_node)
+    end
+    if(air_sys_clg_coil)
+      air_sys_clg_coil.addToNode(supply_inlet_node)
+    end
     oa_system.addToNode(supply_inlet_node)
 
     # add a setpoint manager to control the supply air temperature
@@ -1564,12 +1578,12 @@ begin
     end
 
     # create diffuser
-    zones.each do |zone|
-      diffuser = OpenStudio::Model::AirTerminalSingleDuctUncontrolled.new(model, always_on)
-      air_sys_loop.addBranchForZone(zone, diffuser.to_StraightComponent)
-    end
+#    zones.each do |zone|
+#      diffuser = OpenStudio::Model::AirTerminalSingleDuctUncontrolled.new(model, always_on)
+#      air_sys_loop.addBranchForZone(zone, diffuser.to_StraightComponent)
+#    end
 
-    return true
+    return air_sys_loop
 
   end # Create air system multi-zone loop
 
@@ -1606,7 +1620,7 @@ begin
     air_loop_sizing.setMinimumSystemAirFlowRatio(1.0)
     air_loop_sizing.setPreheatDesignTemperature(7.0)
     air_loop_sizing.setPreheatDesignHumidityRatio(0.008)
-    air_loop_sizing.setPrecoolDesignTemperature(12.8)
+    air_loop_sizing.setPrecoolDesignTemperature(13.0)
     air_loop_sizing.setPrecoolDesignHumidityRatio(0.008)
     air_loop_sizing.setCentralCoolingDesignSupplyAirTemperature(13.0)
     air_loop_sizing.setCentralHeatingDesignSupplyAirTemperature(43.0)
@@ -1645,12 +1659,13 @@ begin
     # cooling coil
     air_sys_clg_coil = nil
     if(air_sys_clg_coil_type == "DX")
-      air_sys_clg_coil = OpenStudio::Model::CoilCoolingDXSingleSpeed.new(model)
+      #air_sys_clg_coil = OpenStudio::Model::CoilCoolingDXSingleSpeed.new(model)
+      air_sys_clg_coil = BTAP::Resources::HVAC::Plant.add_onespeed_DX_coil(model, always_on)
     end
 
     # add the components to the air loop
     supply_inlet_node = air_sys_loop.supplyInletNode
-    if(air_sys_htg_coil_type == 'DX')
+    if(air_sys_htg_coil_type == "DX")
       air_to_air_heatpump = OpenStudio::Model::AirLoopHVACUnitaryHeatPumpAirToAir.new(model, always_on, air_sys_fan, air_sys_htg_coil, air_sys_clg_coil,
                                                                                       supplemental_htg_coil)
       air_to_air_heatpump.setName("#{zone.name} ASHP")
@@ -1692,7 +1707,7 @@ begin
     diffuser = OpenStudio::Model::AirTerminalSingleDuctUncontrolled.new(model, always_on)
     air_sys_loop.addBranchForZone(zone, diffuser.to_StraightComponent)
 
-    return true
+    return air_sys_loop
 
   end # Create air system single-zone loop
 
