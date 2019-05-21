@@ -1,0 +1,952 @@
+{
+  "sql_data": [
+    {
+      "report_name": "AnnualBuildingUtilityPerformanceSummary",
+      "report_for_string": "Entire Facility",
+      "table_name": "End Uses",
+      "table": [
+        {
+          "name": "Heating",
+          "electricity_GJ": 52.77
+        },
+        {
+          "name": "Cooling",
+          "electricity_GJ": 10.28
+        },
+        {
+          "name": "Interior Lighting",
+          "electricity_GJ": 85.83
+        },
+        {
+          "name": "Interior Equipment",
+          "electricity_GJ": 34.34
+        },
+        {
+          "name": "Fans",
+          "electricity_GJ": 60.58
+        },
+        {
+          "name": "Heat Recovery",
+          "electricity_GJ": 19.62
+        },
+        {
+          "name": "Water Systems",
+          "electricity_GJ": 73.88,
+          "water_m3": 375.71
+        },
+        {
+          "name": "Total End Uses",
+          "electricity_GJ": 337.3,
+          "water_m3": 375.71
+        }
+      ]
+    },
+    {
+      "report_name": "AnnualBuildingUtilityPerformanceSummary",
+      "report_for_string": "Entire Facility",
+      "table_name": "Site and Source Energy",
+      "table": [
+        {
+          "name": "Total Site Energy",
+          "total_energy_GJ": 337.3,
+          "energy_per_total_building_area_MJ/m2": 659.89,
+          "energy_per_conditioned_building_area_MJ/m2": 659.89
+        },
+        {
+          "name": "Net Site Energy",
+          "total_energy_GJ": 337.3,
+          "energy_per_total_building_area_MJ/m2": 659.89,
+          "energy_per_conditioned_building_area_MJ/m2": 659.89
+        },
+        {
+          "name": "Total Source Energy",
+          "total_energy_GJ": 1068.24,
+          "energy_per_total_building_area_MJ/m2": 2089.87,
+          "energy_per_conditioned_building_area_MJ/m2": 2089.87
+        },
+        {
+          "name": "Net Source Energy",
+          "total_energy_GJ": 1068.24,
+          "energy_per_total_building_area_MJ/m2": 2089.87,
+          "energy_per_conditioned_building_area_MJ/m2": 2089.87
+        }
+      ]
+    }
+  ],
+  "os_standards_revision": "f0e9e7d",
+  "os_standards_version": "0.2.3",
+  "openstudio_version": "2.6.0.8c81faf8bc",
+  "energyplus_version": "8.9.0",
+  "date": "2019-05-17 15:23:31 +0000",
+  "building": {
+    "name": "FullServiceRestaurant-CAN_BC_Vancouver.Intl.AP.718920_CWEC2016.epw created: 2019-05-17 15:21:50 +0000",
+    "conditioned_floor_area_m2": 511.15331569,
+    "exterior_area_m2": 845.2233291753422,
+    "volume": 2384.1066906608494,
+    "number_of_stories": 2,
+    "standards_number_of_stories": 1,
+    "standards_number_of_above_ground_stories": 1,
+    "standards_number_of_living_units": null,
+    "nominal_floor_to_ceiling_height": null,
+    "nominal_floor_to_floor_height": null
+  },
+  "geography": {
+    "hdd": 2800.0,
+    "cdd": 42.0,
+    "climate_zone": "4",
+    "city": "Vancouver Intl AP",
+    "state_province_region": "BC",
+    "country": "CAN",
+    "latitude": 49.195,
+    "longitude": -123.184
+  },
+  "spacetype_area_breakdown": {
+    "space_function_-_undefined_-": 0,
+    "space_function_dining_area_-_family_dining": 371.74807149,
+    "space_function_food_preparation_area": 139.4052442
+  },
+  "economics": {
+    "total_neb_cost": 7427.3460000000005,
+    "total_neb_cost_per_m2": 14.53056406368784,
+    "Electricity_neb_cost": 7427.3460000000005,
+    "Electricity_neb_cost_per_m2": 14.53056406368784,
+    "Natural Gas_neb_cost": 0.0,
+    "Natural Gas_neb_cost_per_m2": 0.0,
+    "Oil_neb_cost": 0.0,
+    "Oil_neb_cost_per_m2": 0.0,
+    "electricity_cost": 9267.24,
+    "electricity_cost_per_m2": 18.130059447017885,
+    "natural_gas_cost": 0.0,
+    "natural_gas_cost_per_m2": 0.0,
+    "total_cost": 9267.24,
+    "total_cost_per_m2": 18.130059447017885,
+    "additional_cost": 0.0,
+    "additional_cost_per_m2": 0.0
+  },
+  "end_uses": {
+    "heating_gj": 52.77,
+    "cooling_gj": 10.28,
+    "interior_lighting_gj": 85.83,
+    "exterior_lighting_gj": 0,
+    "interior_equipment_gj": 34.34,
+    "exterior_equipment_gj": 0,
+    "fans_gj": 60.58,
+    "pumps_gj": 0,
+    "heat_rejection_gj": 0,
+    "humidification_gj": 0,
+    "heat_recovery_gj": 19.62,
+    "water_systems_gj": 73.88,
+    "water_systems_water_m3": 375.71,
+    "refrigeration_gj": 0,
+    "generators_gj": 0,
+    "total_end_uses_gj": 337.3,
+    "total_end_uses_water_m3": 375.71
+  },
+  "end_uses_eui": {
+    "heating_gj_per_m2": 0.10323712745317203,
+    "cooling_gj_per_m2": 0.020111382797396403,
+    "interior_lighting_gj_per_m2": 0.16791439547670559,
+    "exterior_lighting_gj_per_m2": 0,
+    "interior_equipment_gj_per_m2": 0.06718140907223663,
+    "exterior_equipment_gj_per_m2": 0,
+    "fans_gj_per_m2": 0.11851630057064924,
+    "pumps_gj_per_m2": 0,
+    "heat_rejection_gj_per_m2": 0,
+    "humidification_gj_per_m2": 0,
+    "heat_recovery_gj_per_m2": 0.038383787012151505,
+    "water_systems_gj_per_m2": 0.1445358911548294,
+    "water_systems_water_m3_per_m2": 0.7350240886001754,
+    "refrigeration_gj_per_m2": 0,
+    "generators_gj_per_m2": 0,
+    "total_end_uses_gj_per_m2": 0.6598802935371408,
+    "total_end_uses_water_m3_per_m2": 0.7350240886001754
+  },
+  "meter_peaks": {
+    "electric_w": 27172.26,
+    "natural_gas_w": "NA"
+  },
+  "unmet_hours": {
+    "cooling": 29.75,
+    "heating": 0.0
+  },
+  "service_water_heating": {
+    "total_nominal_occupancy": 44.14898699349675,
+    "electricity_per_year": 73.88,
+    "electricity_per_day": 0.20213406292749656,
+    "electricity_per_day_per_occupant": 0.004578453022201198,
+    "natural_gas_per_year": 0.0,
+    "additional_fuel_per_year": 0.0,
+    "water_m3_per_year": 375.71,
+    "water_m3_per_day": 1.0279343365253077,
+    "water_m3_per_day_per_occupant": 0.023283305156621713
+  },
+  "envelope": {
+    "outdoor_walls_area_m2": 165.43057094399995,
+    "outdoor_roofs_area_m2": 569.505710935342,
+    "outdoor_floors_area_m2": 0,
+    "ground_walls_area_m2": 0,
+    "ground_roofs_area_m2": 0,
+    "ground_floors_area_m2": 511.15331569,
+    "interior_floors_area_m2": 511.15331569,
+    "windows_area_m2": 110.28704729600003,
+    "skylights_area_m2": 0,
+    "doors_area_m2": 0,
+    "overhead_doors_area_m2": 0,
+    "total_exterior_area_m2": 1356.376644865342,
+    "total_ground_area_m2": 511.15331569,
+    "total_outdoor_area_m2": 845.2233291753421,
+    "outdoor_walls_average_conductance_w_per_m2_k": 0.315,
+    "outdoor_roofs_average_conductance_w_per_m2_k": 0.193,
+    "ground_floors_average_conductance_w_per_m2_k": 0.757,
+    "windows_average_conductance_w_per_m2_k": 2.1,
+    "building_outdoor_average_conductance_w_per_m2_k": 0.46570890531799636,
+    "building_ground_average_conductance_w_per_m2_k": 0.757,
+    "building_average_conductance_w_per_m2_k": 0.575482550744085,
+    "fdwr": 40.0,
+    "srr": 0.0,
+    "constructions": {
+      "exterior_fenestration": [
+        {
+          "name": "BTAP-Ext-DaylightDiffuser:U=0.210 SHGC=0.600",
+          "net_area_m2": 110.29,
+          "thermal_conductance_m2_w_per_k": 2.1,
+          "solar_transmittance": 0.6,
+          "visible_tranmittance": 0.21
+        }
+      ],
+      "exterior_opaque": [
+        {
+          "name": "BTAP-Ext-Roof-Metal:U-0.193",
+          "net_area_m2": 569.51,
+          "thermal_conductance_m2_w_per_k": 0.193,
+          "solar_absorptance": 0.7
+        },
+        {
+          "name": "BTAP-Ext-Wall-Mass:U-0.315",
+          "net_area_m2": 165.43,
+          "thermal_conductance_m2_w_per_k": 0.315,
+          "solar_absorptance": 0.92
+        }
+      ],
+      "ground": [
+        {
+          "name": "BTAP-Grnd-Floor-Mass:U-0.757",
+          "net_area_m2": 511.15,
+          "thermal_conductance_m2_w_per_k": 0.757,
+          "solar_absorptance": 0.7
+        }
+      ]
+    },
+    "average_thermal_conductance_m2_w_per_k": [
+      {
+        "name": "attic",
+        "multiplier": 1,
+        "volume": 825.7024617851778,
+        "exterior_wall_area": 0.0,
+        "space_type_name": "Space Function - undefined -",
+        "thermal_zone": "Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN",
+        "breathing_zone_outdoor_airflow_vbz": -1,
+        "infiltration_method": "Flow/ExteriorArea",
+        "infiltration_flow_per_m2": 0.00025,
+        "occupancy_schedule": null,
+        "waterUseEquipment": [
+
+        ]
+      },
+      {
+        "name": "Dining",
+        "multiplier": 1,
+        "volume": 1133.3855203587118,
+        "exterior_wall_area": 169.19041208,
+        "space_type_name": "Space Function Dining area - family dining",
+        "thermal_zone": "Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN",
+        "breathing_zone_outdoor_airflow_vbz": 1.3314,
+        "infiltration_method": "Flow/ExteriorArea",
+        "infiltration_flow_per_m2": 0.00025,
+        "occupancy_schedule": "NECB-B-Occupancy",
+        "occ_per_m2": 0.1,
+        "lighting_w_per_m2": 7.6,
+        "electric_w_per_m2": 1.0,
+        "shw_m3_per_s": 0.0,
+        "waterUseEquipment": [
+          {
+            "peak_flow_rate": 2.36932898320809e-05,
+            "peak_flow_rate_per_area": 6.373480227379807e-08,
+            "shw_watts_per_person": -11.856967675808296
+          }
+        ]
+      },
+      {
+        "name": "Kitchen",
+        "multiplier": 1,
+        "volume": 425.01870851696,
+        "exterior_wall_area": 106.52720615999999,
+        "space_type_name": "Space Function Food preparation area",
+        "thermal_zone": "Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN",
+        "breathing_zone_outdoor_airflow_vbz": 0.1912,
+        "infiltration_method": "Flow/ExteriorArea",
+        "infiltration_flow_per_m2": 0.00025,
+        "occupancy_schedule": "NECB-B-Occupancy",
+        "occ_per_m2": 0.05,
+        "lighting_w_per_m2": 11.4,
+        "electric_w_per_m2": 10.004,
+        "shw_m3_per_s": 0.0,
+        "waterUseEquipment": [
+          {
+            "peak_flow_rate": 4.44248204859448e-06,
+            "peak_flow_rate_per_area": 3.1867395477755494e-08,
+            "shw_watts_per_person": -5.928482785099721
+          }
+        ]
+      }
+    ]
+  },
+  "spaces": [
+    {
+      "name": "attic",
+      "multiplier": 1,
+      "volume": 825.7024617851778,
+      "exterior_wall_area": 0.0,
+      "space_type_name": "Space Function - undefined -",
+      "thermal_zone": "Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN",
+      "breathing_zone_outdoor_airflow_vbz": -1,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": null,
+      "waterUseEquipment": [
+
+      ]
+    },
+    {
+      "name": "Dining",
+      "multiplier": 1,
+      "volume": 1133.3855203587118,
+      "exterior_wall_area": 169.19041208,
+      "space_type_name": "Space Function Dining area - family dining",
+      "thermal_zone": "Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 1.3314,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-B-Occupancy",
+      "occ_per_m2": 0.1,
+      "lighting_w_per_m2": 7.6,
+      "electric_w_per_m2": 1.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 2.36932898320809e-05,
+          "peak_flow_rate_per_area": 6.373480227379807e-08,
+          "shw_watts_per_person": -11.856967675808296
+        }
+      ]
+    },
+    {
+      "name": "Kitchen",
+      "multiplier": 1,
+      "volume": 425.01870851696,
+      "exterior_wall_area": 106.52720615999999,
+      "space_type_name": "Space Function Food preparation area",
+      "thermal_zone": "Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.1912,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-B-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.4,
+      "electric_w_per_m2": 10.004,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 4.44248204859448e-06,
+          "peak_flow_rate_per_area": 3.1867395477755494e-08,
+          "shw_watts_per_person": -5.928482785099721
+        }
+      ]
+    }
+  ],
+  "thermal_zones": [
+    {
+      "name": "Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN",
+      "floor_area": 511.15331569,
+      "multiplier": 1,
+      "is_conditioned": "No",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": -1.0,
+      "cooling_sizing_factor": -1.0,
+      "zone_heating_design_supply_air_temperature": 40.0,
+      "zone_cooling_design_supply_air_temperature": 14.0,
+      "spaces": [
+        {
+          "name": "attic",
+          "type": "Space Function - undefined -"
+        }
+      ],
+      "equipment": [
+
+      ]
+    },
+    {
+      "name": "Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN",
+      "floor_area": 371.74807149,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Dining",
+          "type": "Space Function Dining area - family dining"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 2",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN Elec Baseboard",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN",
+      "floor_area": 139.4052442,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Kitchen",
+          "type": "Space Function Food preparation area"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 1",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN Elec Baseboard",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    }
+  ],
+  "air_loops": [
+    {
+      "name": "Sys_3_PSZ Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN",
+      "thermal_zones": [
+        "Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN"
+      ],
+      "total_floor_area_served": 371.74807149,
+      "total_breathing_zone_outdoor_airflow_vbz": 1.3314,
+      "area_outdoor_air_rate_m3_per_s_m2": 0.003581,
+      "outdoor_air_L_per_s": 1331.22984400569,
+      "supply_fan": {
+        "type": "CV",
+        "name": "Sys_3_PSZ Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN Supply Fan",
+        "fan_efficiency": 0.39975,
+        "motor_efficiency": 0.615,
+        "pressure_rise": 640.0,
+        "max_air_flow_rate_m3_per_s": 1.33,
+        "rated_electric_power_w": 2131.54
+      },
+      "economizer": {
+        "name": "Controller Outdoor Air 2",
+        "control_type": "DifferentialEnthalpy"
+      },
+      "cooling_coils": {
+        "dx_single_speed": [
+
+        ],
+        "dx_two_speed": [
+
+        ],
+        "coil_cooling_water": [
+
+        ]
+      },
+      "heating_coils": {
+        "coil_heating_gas": [
+
+        ],
+        "coil_heating_electric": [
+          {
+            "name": "Sys_3_PSZ Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN Elec Htg Coil",
+            "type": "Electric",
+            "nominal_capacity": 79068.67
+          }
+        ],
+        "coil_heating_water": [
+
+        ]
+      },
+      "heat_exchanger": {
+      }
+    },
+    {
+      "name": "Sys_3_PSZ Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN",
+      "thermal_zones": [
+        "Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN"
+      ],
+      "total_floor_area_served": 139.4052442,
+      "total_breathing_zone_outdoor_airflow_vbz": 0.1912,
+      "area_outdoor_air_rate_m3_per_s_m2": 0.001372,
+      "outdoor_air_L_per_s": 191.26399504239998,
+      "supply_fan": {
+        "type": "CV",
+        "name": "Sys_3_PSZ Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN Supply Fan",
+        "fan_efficiency": 0.39975,
+        "motor_efficiency": 0.615,
+        "pressure_rise": 640.0,
+        "max_air_flow_rate_m3_per_s": 0.48,
+        "rated_electric_power_w": 760.77
+      },
+      "economizer": {
+        "name": "Controller Outdoor Air 1",
+        "control_type": "NoEconomizer"
+      },
+      "cooling_coils": {
+        "dx_single_speed": [
+
+        ],
+        "dx_two_speed": [
+
+        ],
+        "coil_cooling_water": [
+
+        ]
+      },
+      "heating_coils": {
+        "coil_heating_gas": [
+
+        ],
+        "coil_heating_electric": [
+          {
+            "name": "Sys_3_PSZ Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN Elec Htg Coil",
+            "type": "Electric",
+            "nominal_capacity": 18620.86
+          }
+        ],
+        "coil_heating_water": [
+
+        ]
+      },
+      "heat_exchanger": {
+      }
+    }
+  ],
+  "plant_loops": [
+    {
+      "name": "Main Service Water Loop",
+      "design_loop_exit_temperature": 60.0,
+      "loop_design_temperature_difference": 5.0,
+      "pumps": [
+        {
+          "name": "Service Water Loop Pump",
+          "type": "Pump:ConstantSpeed",
+          "head_pa": 226.45,
+          "water_flow_m3_per_s": 2.8e-05,
+          "electric_power_w": 0.01,
+          "motor_efficency": 0.7
+        }
+      ],
+      "boilers": [
+
+      ],
+      "chiller_electric_eir": [
+
+      ],
+      "cooling_tower_single_speed": [
+
+      ],
+      "water_heater_mixed": [
+        {
+          "name": "48gal Electricity Water Heater - 33kBtu/hr 1.0 Therm Eff",
+          "type": "WaterHeater:Mixed",
+          "heater_thermal_efficiency": 1.0,
+          "heater_fuel_type": "Electricity"
+        }
+      ]
+    }
+  ],
+  "eplusout_err": {
+    "warnings": [
+      "ProcessScheduleInput: Schedule:Day:Interval=\"ECONOMIZER MAX OA FRACTION 100 PCT DEFAULT\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 1\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 10\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 11\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 12\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 13\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 14\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 2\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 5\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 6\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 7\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 8\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 9\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"ECONOMIZER MAX OA FRACTION 100 PCT\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 3\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 4\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 5\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 6\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 7\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 8\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Constant=\"ALWAYS ON CONTINUOUS\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "CheckUsedConstructions: There are 15 nominally unused constructions in input.  For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;",
+      "GetVarSpeedCoilInput: COIL:HEATING:DX:VARIABLESPEED=\"SYS_3_PSZ SP-DINING SYS-3 FLR-1 SCH-B HPLCMT-SOUTH ZN CCASHP DX HTG COIL\",   ...Minimum Outdoor Dry-Bulb Temperature for Compressor Operation = 0.0 for defrost control = TIMED.",
+      "GetVarSpeedCoilInput: COIL:HEATING:DX:VARIABLESPEED=\"SYS_3_PSZ SP-KITCHEN SYS-3 FLR-1 SCH-B HPLCMT-NORTH ZN CCASHP DX HTG COIL\",   ...Minimum Outdoor Dry-Bulb Temperature for Compressor Operation = 0.0 for defrost control = TIMED.",
+      "Output:Meter: invalid Key Name=\"GAS:FACILITY\" - not found.",
+      "Output:Meter: invalid Key Name=\"DISTRICTCOOLING:FACILITY\" - not found.",
+      "Output:Meter: invalid Key Name=\"DISTRICTHEATING:FACILITY\" - not found.",
+      "Output:Meter:MeterFileOnly: invalid Key Name=\"GAS:FACILITY\" - not found.",
+      "Output:Meter:MeterFileOnly: invalid Key Name=\"GAS:FACILITY\" - not found.",
+      "Output:Meter:MeterFileOnly requested for \"Electricity:Facility\" (TimeStep), already on \"Output:Meter\". Will report to both eplusout.eso and eplusout.mtr",
+      "Processing Monthly Tabular Reports: Variable names not valid for this simulation  ...use Output:Diagnostics,DisplayExtraWarnings; to show more details on individual variables.",
+      "GetInputEconomicsTariff: UtilityCost:Tariff=\"FORTISBC\" missing meter  Meter referenced is not present due to a lack of equipment that uses that energy source/meter:\"GAS:FACILITY\".",
+      "GetInputEconomicsTariff: UtilityCost:Tariff=\"NONEOIL\" missing meter  Meter referenced is not present due to a lack of equipment that uses that energy source/meter:\"FUELOIL#2:FACILITY\".",
+      "HeatExchanger:AirToAir:SensibleAndLatent \"SYS_3_PSZ SP-DINING SYS-3 FLR-1 SCH-B HPLCMT-SOUTH ZN ERV\"  Average air volume flow rate is <50% or >130% of the nominal HX supply air volume flow rate.  Air volume flow rate ratio = 1.427E-002. Environment=RUN PERIOD 1, at Simulation time=01/01 09:00 - 09:15",
+      "The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-DISTILLATE OIL\" has no energy cost.   ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.",
+      "The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-RESIDUAL OIL\" has no energy cost.   ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.",
+      "The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-NATURAL GAS\" has no energy cost.   ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.",
+      "The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-COAL\" has no energy cost.   ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.",
+      "HeatExchanger:AirToAir:SensibleAndLatent \"SYS_3_PSZ SP-DINING SYS-3 FLR-1 SCH-B HPLCMT-SOUTH ZN ERV\":  Average air volume flow rate is <50% or >130% warning continues. Air flow rate ratio statistics follow."
+    ],
+    "fatal": [
+
+    ],
+    "severe": [
+
+    ]
+  },
+  "ruby_warnings": [
+    "space.spaceType.get.defaultScheduleSet.get.numberofPeopleSchedule is empty for attic",
+    "space.spaceType.get.lights[0] is nil for Space:[attic] Space Type:[Space Function - undefined -]",
+    "zone.sizingZone.zoneHeatingSizingFactor is empty for Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN",
+    "zone.sizingZone.zoneCoolingSizingFactor is empty for Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN"
+  ],
+  "code_metrics": {
+    "heating_gj": 52.77,
+    "cooling_gj": 10.28,
+    "ep_conditioned_floor_area_m2": 511.15331569,
+    "os_conditioned_floor_area_m2": 1022.30663138,
+    "building_tedi_gj_per_m2": 0.12334851025056842,
+    "building_medi_gj_per_m2": 0.15690008758280075
+  },
+  "costing_information": {
+    "rs_means_city": "VANCOUVER",
+    "rs_means_prov": "BRITISH COLUMBIA",
+    "envelope": {
+      "exterior_wall_cost": 7949.39,
+      "exterior_wall_area_m2": 165.6,
+      "exterior_wall_cost_per_m2": 48.0,
+      "exterior_roof_cost": 53532.55,
+      "exterior_roof_area_m2": 569.6,
+      "exterior_roof_cost_per_m2": 93.98,
+      "exterior_floor_cost": 0.0,
+      "exterior_floor_area_m2": 0.0,
+      "exterior_floor_cost_per_m2": 0.0,
+      "exterior_fixed_window_cost": 6829.9400000000005,
+      "exterior_fixed_window_area_m2": 110.4,
+      "exterior_fixed_window_cost_per_m2": 61.87,
+      "exterior_operable_window_cost": 0.0,
+      "exterior_operable_window_area_m2": 0.0,
+      "exterior_operable_window_cost_per_m2": 0.0,
+      "exterior_skylight_cost": 0.0,
+      "exterior_skylight_area_m2": 0.0,
+      "exterior_skylight_cost_per_m2": 0.0,
+      "exterior_tubular_daylight_diffuser_cost": 0.0,
+      "exterior_tubular_daylight_diffuser_area_m2": 0.0,
+      "exterior_tubular_daylight_diffuser_cost_per_m2": 0.0,
+      "exterior_tubular_daylight_dome_cost": 0.0,
+      "exterior_tubular_daylight_dome_area_m2": 0.0,
+      "exterior_tubular_daylight_dome_cost_per_m2": 0.0,
+      "exterior_door_cost": 0.0,
+      "exterior_door_area_m2": 0.0,
+      "exterior_door_cost_per_m2": 0.0,
+      "exterior_glass_door_cost": 0.0,
+      "exterior_glass_door_area_m2": 0.0,
+      "exterior_glass_door_cost_per_m2": 0.0,
+      "exterior_overhead_door_cost": 0.0,
+      "exterior_overhead_door_area_m2": 0.0,
+      "exterior_overhead_door_cost_per_m2": 0.0,
+      "ground_contact_wall_cost": 0.0,
+      "ground_contact_wall_area_m2": 0.0,
+      "ground_contact_wall_cost_per_m2": 0.0,
+      "ground_contact_roof_cost": 0.0,
+      "ground_contact_roof_area_m2": 0.0,
+      "ground_contact_roof_cost_per_m2": 0.0,
+      "ground_contact_floor_cost": 40949.0,
+      "ground_contact_floor_area_m2": 511.1,
+      "ground_contact_floor_cost_per_m2": 80.12,
+      "construction_costs": [
+        {
+          "name": "BTAP-ExteriorRoof-IEAD-4",
+          "conductance": 0.19300000000000014,
+          "area": 569.505710935342,
+          "cost": 53532.55041536584,
+          "cost_per_area": 93.99826794966694,
+          "note": "Surf #1: OK / 2: OK / 3: OK / 4: OK"
+        },
+        {
+          "name": "BTAP-ExteriorWall-SteelFramed-1",
+          "conductance": 0.31500000000000006,
+          "area": 101.51424724799989,
+          "cost": 4317.6572148117875,
+          "cost_per_area": 42.532524565381706,
+          "note": "Surf #1: RSI out of the range (3.17). Range for BTAP-ExteriorWall-SteelFramed-1 is 3.18-5.46.Using extrapolation up to +/-30% of library boundaries.  / 2: RSI out of the range (3.17). Range for BTAP-ExteriorWall-SteelFramed-1 is 3.18-5.46.Using extrapolation up to +/-30% of library boundaries.  / 3: RSI out of the range (3.17). Range for BTAP-ExteriorWall-SteelFramed-1 is 3.18-5.46.Using extrapolation up to +/-30% of library boundaries. "
+        },
+        {
+          "name": "BTAP-ExteriorWindow-FixedWindow-6",
+          "conductance": 2.1,
+          "area": 110.28704729600003,
+          "cost": 6829.936791997097,
+          "cost_per_area": 61.92873015873017,
+          "note": "Surf #1: OK / 2: OK / 3: OK / 1: OK / 2: OK / 3: OK"
+        },
+        {
+          "name": "BTAP-GroundContactFloor-Unheated-1",
+          "conductance": 0.7570000000000018,
+          "area": 511.15331569,
+          "cost": 40949.00529894825,
+          "cost_per_area": 80.11100396301188,
+          "note": "Surf #1: OK / 1: OK"
+        },
+        {
+          "name": "BTAP-ExteriorWall-Mass-2",
+          "conductance": 0.31500000000000006,
+          "area": 63.91632369600006,
+          "cost": 3631.7390396709975,
+          "cost_per_area": 56.82021164021163,
+          "note": "Surf #1: RSI out of the range (3.17). Range for BTAP-ExteriorWall-Mass-2 is 3.18-5.46.Using extrapolation up to +/-30% of library boundaries.  / 2: RSI out of the range (3.17). Range for BTAP-ExteriorWall-Mass-2 is 3.18-5.46.Using extrapolation up to +/-30% of library boundaries.  / 3: RSI out of the range (3.17). Range for BTAP-ExteriorWall-Mass-2 is 3.18-5.46.Using extrapolation up to +/-30% of library boundaries. "
+        }
+      ],
+      "total_envelope_cost": 109260.89
+    },
+    "lighting": {
+      "fixture_report": [
+        {
+          "fixture_type": "Nil",
+          "fixture_description": "",
+          "floor_area_ft2": 5502.0,
+          "cost": 0.0,
+          "cost_per_ft2": 0.0,
+          "spaces": [
+            "attic"
+          ],
+          "number_of_spaces": 1
+        },
+        {
+          "fixture_type": "7",
+          "fixture_description": "High Bay (10 ft above work plane) Fluorescent Lighting 1.5 W/ft2 (16 W/m2), 103FC, 7 Fixtures per 1000 ft2",
+          "floor_area_ft2": 5502.0,
+          "cost": 29823.306876158185,
+          "cost_per_ft2": 5.420448359897889,
+          "spaces": [
+            "Dining",
+            "Kitchen"
+          ],
+          "number_of_spaces": 2
+        }
+      ],
+      "space_report": [
+        {
+          "space": "attic",
+          "zone": "Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN",
+          "building_type": "Space Function",
+          "space_type": "- undefined -",
+          "zone_multiplier": 1,
+          "fixture_type": "Nil",
+          "fixture_desciption": "",
+          "height_avg_ft": 5.3,
+          "floor_area_ft2": 5502.0,
+          "cost": 0.0,
+          "cost_per_ft2": 0.0,
+          "note": ""
+        },
+        {
+          "space": "Dining",
+          "zone": "Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN",
+          "building_type": "Space Function",
+          "space_type": "Dining area - family dining",
+          "zone_multiplier": 1,
+          "fixture_type": "7",
+          "fixture_desciption": "High Bay (10 ft above work plane) Fluorescent Lighting 1.5 W/ft2 (16 W/m2), 103FC, 7 Fixtures per 1000 ft2",
+          "height_avg_ft": 10.0,
+          "floor_area_ft2": 4001.5,
+          "cost": 21689.69,
+          "cost_per_ft2": 5.420389597235704,
+          "note": ""
+        },
+        {
+          "space": "Kitchen",
+          "zone": "Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN",
+          "building_type": "Space Function",
+          "space_type": "Food preparation area",
+          "zone_multiplier": 1,
+          "fixture_type": "7",
+          "fixture_desciption": "High Bay (10 ft above work plane) Fluorescent Lighting 1.5 W/ft2 (16 W/m2), 103FC, 7 Fixtures per 1000 ft2",
+          "height_avg_ft": 10.0,
+          "floor_area_ft2": 1500.5,
+          "cost": 8133.62,
+          "cost_per_ft2": 5.4206043826445764,
+          "note": ""
+        }
+      ],
+      "total_lighting_cost": 29823.31
+    },
+    "heating_and_cooling": {
+      "plant_equipment": [
+        {
+          "type": "boilers",
+          "nom_flr2flr_hght_ft": 15.3,
+          "ht_roof_ft": 15.3,
+          "longest_distance_to_ext_ft": 52.5,
+          "wiring_and_gas_connections_distance_ft": 52.5,
+          "equipment_cost": 0.0,
+          "flue_cost": 0.0,
+          "wiring_and_gas_connections_cost": 0.0,
+          "pump_cost": 0.0,
+          "piping_cost": 0.0,
+          "total_cost": 0.0
+        },
+        {
+          "type": "chillers",
+          "nom_flr2flr_hght_ft": 15.3,
+          "ht_roof_ft": 15.3,
+          "longest_distance_to_ext_ft": 52.5,
+          "wiring_and_gas_connections_distance_ft": 52.5,
+          "equipment_cost": 0.0,
+          "flue_cost": 0.0,
+          "wiring_and_gas_connections_cost": 0.0,
+          "pump_cost": 0.0,
+          "piping_cost": 0.0,
+          "total_cost": 0.0
+        },
+        {
+          "type": "cooling_towers",
+          "nom_flr2flr_hght_ft": 15.3,
+          "ht_roof_ft": 15.3,
+          "longest_distance_to_ext_ft": 52.5,
+          "wiring_and_gas_connections_distance_ft": 52.5,
+          "equipment_cost": 0.0,
+          "wiring_and_gas_connections_cost": 0.0,
+          "pump_cost": 0.0,
+          "piping_cost": 0.0,
+          "total_cost": 0.0
+        }
+      ],
+      "zonal_systems": [
+        {
+          "systype": null,
+          "zone_number": 2,
+          "zone_name": "Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN",
+          "zone_multiple": 1,
+          "heat_capacity(kW)": 10.6,
+          "cool_capacity(kW)": 0.0,
+          "heat_cost": 0.0,
+          "cool_cost": 0.0,
+          "heatcool_cost": 0.0,
+          "num_units": null,
+          "cummultive_cost": 0.0
+        },
+        {
+          "systype": null,
+          "zone_number": 3,
+          "zone_name": "Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN",
+          "zone_multiple": 1,
+          "heat_capacity(kW)": 4.8,
+          "cool_capacity(kW)": 0.0,
+          "heat_cost": 0.0,
+          "cool_cost": 0.0,
+          "heatcool_cost": 0.0,
+          "num_units": null,
+          "cummultive_cost": 0.0
+        }
+      ]
+    },
+    "shw": {
+    },
+    "ventilation": {
+    },
+    "totals": {
+      "envelope": 109260.89,
+      "lighting": 29823.31,
+      "heating_and_cooling": 0.0,
+      "shw": 0.0,
+      "ventilation": 132084.54,
+      "grand_total": 271168.73
+    },
+    "zonal systems": {
+    }
+  },
+  "measures": [
+    {
+      "name": "btap_create_necb_prototype_building",
+      "arguments": {
+        "building_type": "FullServiceRestaurant",
+        "epw_file": "CAN_BC_Vancouver.Intl.AP.718920_CWEC2016.epw",
+        "new_auto_zoner": true,
+        "template": "NECB2017"
+      },
+      "display_name": "BTAPCreateNECBPrototypeBuilding",
+      "measure_class_name": "BTAPCreateNECBPrototypeBuilding",
+      "index": 0,
+      "is_ecm": false
+    },
+    {
+      "name": "set_heat_pump_air_system",
+      "arguments": {
+        "clg_cop": 0,
+        "heat_pump_type": "CCASHP",
+        "htg_cop": 0,
+        "zone_clg_eqpt": "Keep Existing",
+        "zone_htg_eqpt": "Electric Baseboard",
+        "zone_term_reheat_eqpt": "Electric"
+      },
+      "display_name": "SetHeatPumpAirSystem",
+      "measure_class_name": "SetHeatPumpAirSystem",
+      "index": 1,
+      "is_ecm": false
+    },
+    {
+      "name": "btap_utility_tariffs_model_setup",
+      "arguments": {
+      },
+      "display_name": "BTAPUtilityTariffsModelSetup",
+      "measure_class_name": "BTAPUtilityTariffsModelSetup",
+      "index": 2,
+      "is_ecm": false
+    },
+    {
+      "name": "btap_results",
+      "arguments": {
+        "generate_hourly_report": "false",
+        "output_diet": false
+      },
+      "display_name": "BTAP Results",
+      "measure_class_name": "BTAPResults",
+      "index": 3,
+      "is_ecm": false
+    },
+    {
+      "name": "server_directory_cleanup",
+      "arguments": {
+      },
+      "display_name": "Server Directory Cleanup",
+      "measure_class_name": "ServerDirectoryCleanup",
+      "index": 4,
+      "is_ecm": false
+    }
+  ],
+  "analysis_id": "68c8b576-a9a1-447a-a2db-fd41b0db3a06",
+  "analysis_name": "necb_full_national_cchp_test"
+}
